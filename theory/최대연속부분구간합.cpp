@@ -24,7 +24,7 @@ int fastMaxSum(const vector<int> &A, int lo, int hi) {
 }
 
 //n, DP, A[i]를 오른쪽 끝으로 갖는 구간의 최대 합을 찾기
-//A[i]가 최대가 되는 경우는 A[i]만 있거나, A[i-1]을 오른쪽 끝으로 갖는 최대 합 구간에 A[i]를 더하는 두가지 경우
+//A[i]가 우측끝일 때 최대가 되는 경우는 A[i]만 있거나(psum이 음수인 경우를 생각하면 된다.), A[i-1]을 오른쪽 끝으로 갖는 최대 합 구간에 A[i]를 더하는 두가지 경우
 int fastestMaxSum(const vector<int> &A) {
     int N = (int) A.size(), ret = INT_MIN, psum = 0;
     for (int i = 0; i < N; ++i) {
