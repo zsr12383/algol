@@ -18,6 +18,7 @@ const ll inf = 1e17;
 const ll MAXM = 1e5;
 vector<ll> factors[MAXM + 5];
 
+// 2차원으로 숫자들의 약수 리스트를 초기화( 에라토스 테네스의 체와 비슷 )
 void init() {
     for (ll i = 1; i <= MAXM; i++) {
         for (ll j = i; j <= MAXM; j += i) {
